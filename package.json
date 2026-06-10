@@ -3,10 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "kill-port": "lsof -ti :3000 | xargs kill -9 2>/dev/null || true",
+    "kill-ports": "for p in 3000 3333; do lsof -ti :$p | xargs kill -9 2>/dev/null || true; done",
+    "predev": "npm run kill-ports",
+    "dev": "next dev --hostname 127.0.0.1 --webpack -p 3000",
     "build": "next build",
+    "serve": "next start --hostname 127.0.0.1 -p 3000",
+    "site": "bash scripts/start-site.sh 3333",
+    "start:local": "npm run kill-port && npm run build && npm run serve",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "set-shakshuka": "node scripts/set-shakshuka-image.mjs"
   },
   "dependencies": {
     "framer-motion": "^12.40.0",
