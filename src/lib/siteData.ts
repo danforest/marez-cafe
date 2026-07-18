@@ -225,7 +225,7 @@ export const contactSection = {
 };
 
 export const bookSection = {
-  title: "Book with us",
+  title: "How to Find Us",
   findingUsHeading: "Finding Us",
   findingUsText:
     "We run on a first-come, first-served basis so we can keep the doors open to as many people as possible. Walk-ins are always welcome. For groups of 5 or more, we do take bookings.",

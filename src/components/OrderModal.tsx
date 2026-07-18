@@ -9,14 +9,15 @@ type View = "choice" | "collection";
 type Props = {
   isOpen: boolean;
   onClose: () => void;
+  initialView?: View;
 };
 
-export default function OrderModal({ isOpen, onClose }: Props) {
-  const [view, setView] = useState<View>("choice");
+export default function OrderModal({ isOpen, onClose, initialView = "choice" }: Props) {
+  const [view, setView] = useState<View>(initialView);
 
   useEffect(() => {
     if (!isOpen) {
-      setView("choice");
+      setView(initialView);
       return;
     }
     const handleKey = (e: KeyboardEvent) => {
@@ -31,7 +32,7 @@ export default function OrderModal({ isOpen, onClose }: Props) {
       document.body.style.overflow = "";
       document.removeEventListener("keydown", handleKey);
     };
-  }, [isOpen, view, onClose]);
+  }, [isOpen, view, onClose, initialView]);
 
   if (!isOpen) return null;
 
