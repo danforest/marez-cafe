@@ -11,7 +11,7 @@ export default function MenuCarousel() {
         <SectionHeader eyebrow="Menus" title="Menu Categories" align="center">
           <p>
             Five menus, one kitchen. Fresh bakes, breakfast, lunch, kids and
-            drinks — all day, every day.
+            drinks, all day, every day.
           </p>
         </SectionHeader>
       </ScrollReveal>

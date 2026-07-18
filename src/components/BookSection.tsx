@@ -30,7 +30,9 @@ export default function BookSection() {
                 <h2 className="book-panel-title">{bookSection.title}</h2>
 
                 <p className="book-panel-label">{bookSection.findingUsHeading}</p>
-                <p className="book-panel-text">{bookSection.findingUsText}</p>
+                {bookSection.findingUsBody.map((para, i) => (
+                  <p key={i} className="book-panel-text">{para}</p>
+                ))}
                 <p className="book-panel-text">
                   Dine in with us, order via{" "}
                   <a

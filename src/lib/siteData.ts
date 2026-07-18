@@ -61,7 +61,7 @@ export const siteConfig = {
   phone: "020 3632 8345",
   email: "hello@marez.co.uk",
   bookingNote:
-    "We primarily welcome walk-ins on a first-come, first-served basis. Bookings accepted for groups of 5 or more.",
+    "We primarily welcome walk-ins on a first-come, first-served basis. Bookings accepted for 1 or more.",
   challenge25:
     "Alcohol is not for sale to persons under the age of 18. We operate with a Challenge 25 Policy.",
 };
@@ -79,7 +79,7 @@ export const topNavigation = [
 ];
 
 export const announcement = {
-  text: "Introducing Marez After Dark — bold North African flavours, great music & warm lighting.",
+  text: "Introducing Marez After Dark. Bold North African flavours, great music & warm lighting.",
   href: "#promos",
   storageKey: "marez-announcement-dismissed",
 };
@@ -95,7 +95,7 @@ export const promoModal = {
 export const navPromo = {
   title: "Marez After Dark",
   description:
-    "Our new evening supper clubs — bold flavours, great music, and the warmth you know from Marez.",
+    "Our new evening supper clubs. Bold flavours, great music, and the warmth you know from Marez.",
   image:
     "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80",
   cta: { label: "Find out more", href: "#promos" },
@@ -216,19 +216,22 @@ export const contactSection = {
   eyebrow: "Contact",
   title: "Say hello",
   intro:
-    "Got a question about bookings, catering, or just want to say hi — we'd love to hear from you.",
+    "Got a question about bookings, catering, or just want to say hi? We'd love to hear from you.",
   phone: "02036328345",
   phoneDisplay: "020 3632 8345",
   email: "hello@marez.co.uk",
   submitLabel: "Send it",
-  successMessage: "Thank you — your message has been received. We'll be in touch soon.",
+  successMessage: "Thank you. Your message has been received. We'll be in touch soon.",
 };
 
 export const bookSection = {
   title: "How to Find Us",
   findingUsHeading: "Finding Us",
-  findingUsText:
-    "We run on a first-come, first-served basis so we can keep the doors open to as many people as possible. Walk-ins are always welcome. For groups of 5 or more, we do take bookings.",
+  findingUsBody: [
+    "We're at 40 Broad Street, Teddington, TW11 8QY, right in the heart of the village.",
+    "Teddington station is a five-minute walk away, on the Kingston Loop Line with regular trains to London Waterloo (around 40 minutes) via Richmond, Twickenham and Kingston. Prefer the bus? Several routes stop right outside on Broad Street, including the SL7 running direct to Heathrow.",
+    "Driving down? There's pay-and-display parking along Broad Street itself, plus council car parks a short walk away on North Lane and Cedar Road.",
+  ],
   orderText:
     "Dine in with us, order via Deliveroo, or call ahead and collect. Whatever works for you.",
   hoursHeading: "Opening Hours",
@@ -241,7 +244,7 @@ export const bookSection = {
 export const cateringSection = {
   title: "Catering",
   leadText:
-    "Feeding the office? Marez brings Mediterranean and North African-inspired platters straight to your workplace — order ahead for meetings, team lunches, or all-day events. Ask us about lead times, delivery radius and minimum orders.",
+    "Feeding the office? Marez brings Mediterranean and North African-inspired platters straight to your workplace, order ahead for meetings, team lunches, or all-day events. Ask us about lead times, delivery radius and minimum orders.",
   privateText:
     "We also cater for private events and venue hire. Get in touch and we'll handle every detail, from menu to delivery.",
   cta: { label: "Get in touch", href: "#contact" },
@@ -367,7 +370,7 @@ export const menuCategories: MenuCategory[] = [
       {
         name: "Cheesy Flatbread Pizza",
         price: "£6.95",
-        description: "Tomato, mozzarella, sweetcorn — fun and filling.",
+        description: "Tomato, mozzarella, sweetcorn. Fun and filling.",
         ingredients: ["Flatbread", "Mozzarella", "Tomato"],
         tags: ["Kids", "Vegetarian"],
         image:
@@ -388,7 +391,7 @@ export const menuCategories: MenuCategory[] = [
       {
         name: "Flat White",
         price: "£3.50",
-        description: "Climpson & Sons The Baron — rich, rounded, sweet.",
+        description: "Climpson & Sons The Baron, rich, rounded, sweet.",
         ingredients: ["Espresso", "Steamed milk"],
         tags: ["Coffee"],
         image:
@@ -397,7 +400,7 @@ export const menuCategories: MenuCategory[] = [
       {
         name: "Fresh Mint Tea",
         price: "£3.25",
-        description: "North African style — fresh, fragrant, restorative.",
+        description: "North African style, fresh, fragrant, restorative.",
         ingredients: ["Fresh mint", "Hot water"],
         tags: ["Vegan"],
         image:
@@ -551,7 +554,7 @@ export const coffee = {
   blend: "The Baron",
   origin: "Brazilian beans",
   description:
-    "Rich, rounded, and sweet — characteristic of the region, with a flavour profile of clean dark chocolate, sweet nuttiness and marzipan. Sits exceptionally well as espresso and in milk.",
+    "Rich, rounded, and sweet, characteristic of the region, with a flavour profile of clean dark chocolate, sweet nuttiness and marzipan. Sits exceptionally well as espresso and in milk.",
   image:
     "https://images.unsplash.com/photo-1497935586761-b94a89712afe?auto=format&fit=crop&w=800&q=80",
 };
@@ -561,7 +564,7 @@ export const promoBlocks = [
     id: "events",
     title: "Marez Events",
     description:
-      "Now we do events and catering for your special occasions. Contact us to hire our venue — we'll make it a pure moment of pleasure and joy.",
+      "Now we do events and catering for your special occasions. Contact us to hire our venue. We'll make it a pure moment of pleasure and joy.",
     cta: { label: "Enquire About Events", href: "#contact" },
     image:
       "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80",

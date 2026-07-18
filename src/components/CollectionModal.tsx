@@ -55,7 +55,7 @@ export default function CollectionModal({ isOpen, onClose }: CollectionModalProp
         </h2>
 
         <p className="type-body-sm mb-5 text-[var(--color-text-muted)]">
-          Skip the queue and save — order ahead for collection and enjoy 15% off
+          Skip the queue and save. Order ahead for collection and enjoy 15% off
           your bill. Just give us a call and we'll have it ready for you.
         </p>
 
@@ -63,7 +63,7 @@ export default function CollectionModal({ isOpen, onClose }: CollectionModalProp
           href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
           className="btn-primary w-full justify-center"
         >
-          Call to order — {siteConfig.phone}
+          Call to order: {siteConfig.phone}
         </a>
       </div>
     </div>

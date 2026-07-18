@@ -3,7 +3,7 @@ import { Fragment } from "react";
 const ITEMS = [
   "Mediterranean warmth · North African heart",
   "Teddington, London",
-  "Order for Collection — 15% off",
+  "Order for Collection, 15% off",
   "Feel-Good Feasting",
   "Open Mon–Sat 8am–5pm · Sun 9am–4pm",
 ];

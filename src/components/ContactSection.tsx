@@ -52,9 +52,9 @@ export default function ContactSection() {
                     </p>
                     <h2 className="contact-panel-title">Reservations</h2>
                     <p className="type-body contact-panel-intro">
-                      We welcome walk-ins first-come, first-served. For groups of 5 or
-                      more, use this form to request a booking — it will open your email
-                      client pre-filled and ready to send.
+                      We welcome walk-ins first-come, first-served. Use this form to
+                      request a booking. It will open your email client pre-filled and
+                      ready to send.
                     </p>
                   </header>
 
@@ -156,8 +156,7 @@ export default function ContactSection() {
                       </div>
 
                       <p className="type-body-sm mt-4 text-[var(--color-text-muted)]">
-                        Submitting will open your email app pre-filled — just hit send.
-                        Bookings accepted for groups of 5 or more.
+                        Submitting will open your email app pre-filled. Just hit send.
                       </p>
 
                       <button type="submit" className="btn-primary contact-submit">

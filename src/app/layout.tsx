@@ -24,7 +24,7 @@ const generalSans = localFont({
 export const metadata: Metadata = {
   title: "Marez Café • Feel-Good Feasting",
   description:
-    "North African sunshine on every plate. Brunch, lunch and everything in between — the café for everyone.",
+    "North African sunshine on every plate. Brunch, lunch and everything in between. The café for everyone.",
 };
 
 export default function RootLayout({

@@ -14,7 +14,7 @@ export default function LocationsGrid() {
           align="center"
         >
           <p>
-            Eight high street cafés across South West London — each with its
+            Eight high street cafés across South West London, each with its
             own personality, local team and loyal regulars.
           </p>
         </SectionHeader>

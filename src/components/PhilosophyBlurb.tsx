@@ -9,7 +9,7 @@ export default function PhilosophyBlurb() {
         <blockquote className="mx-auto max-w-3xl text-center">
           <p className="type-quote">&ldquo;{philosophyQuote.quote}&rdquo;</p>
           <footer className="type-body-sm philosophy-quote-attribution mt-8">
-            — {philosophyQuote.attribution}
+            · {philosophyQuote.attribution}
           </footer>
         </blockquote>
       </ScrollReveal>

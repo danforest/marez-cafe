@@ -100,7 +100,7 @@ export default function OrderModal({ isOpen, onClose, initialView = "choice" }: 
                 onClick={() => setView("collection")}
                 className="btn-outline w-full justify-center"
               >
-                Click &amp; Collect — 15% off
+                Click &amp; Collect, 15% off
               </button>
             </div>
           </>
@@ -114,7 +114,7 @@ export default function OrderModal({ isOpen, onClose, initialView = "choice" }: 
               15% off when you collect
             </h2>
             <p className="type-body-sm mb-5 text-[var(--color-text-muted)]">
-              Skip the queue and save — order ahead for collection and enjoy
+              Skip the queue and save. Order ahead for collection and enjoy
               15% off your bill. Just give us a call and we&apos;ll have it
               ready for you.
             </p>
@@ -122,7 +122,7 @@ export default function OrderModal({ isOpen, onClose, initialView = "choice" }: 
               href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
               className="btn-primary w-full justify-center"
             >
-              Call to order — {siteConfig.phone}
+              Call to order: {siteConfig.phone}
             </a>
           </>
         )}

@@ -53,7 +53,7 @@ export default function TestimonialCarousel({
           {locationLabel}
         </p>
         <p className="type-quote mt-4">&ldquo;{current.quote}&rdquo;</p>
-        <footer className="type-body-sm mt-6">— {current.author}</footer>
+        <footer className="type-body-sm mt-6">· {current.author}</footer>
       </blockquote>
 
       {reviews.length > 1 && (
