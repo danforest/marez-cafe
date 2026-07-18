@@ -1,22 +1,21 @@
 "use client";
 
-import { Search, X } from "lucide-react";
+import { Menu, Search, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import NavArrowIcon from "@/components/NavArrowIcon";
-import CollectionModal from "@/components/CollectionModal";
 import { orderLinks, topNavigation } from "@/lib/siteData";
 
 export default function Navbar() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [query, setQuery] = useState("");
-  const [collectionOpen, setCollectionOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <>
       <header className="nav-header">
-        <nav className="flex items-center gap-3 px-4 py-3.5 sm:gap-4 md:px-10 md:py-4 lg:px-14">
+        <nav className="flex items-center gap-3 px-4 py-3.5 md:px-10 md:py-4 lg:px-14">
           <Link
             href="/"
             className="logo-text shrink-0 text-base sm:text-lg"
@@ -33,15 +32,19 @@ export default function Navbar() {
             />
           </Link>
 
-          <ul className="flex min-w-0 flex-1 items-center justify-center gap-4 overflow-x-auto whitespace-nowrap scrollbar-hide sm:gap-5 md:gap-8">
+          {/* Desktop text links — hidden below lg */}
+          <ul className="hidden flex-1 items-center justify-center gap-5 lg:flex xl:gap-8">
             {topNavigation.map((item) => (
               <li key={item.label} className="shrink-0">
-                <Link href={item.href} className="type-label nav-link">
+                <Link href={item.href} className="type-label nav-link whitespace-nowrap">
                   {item.label}
                 </Link>
               </li>
             ))}
           </ul>
+
+          {/* Spacer on mobile keeps pills right-aligned */}
+          <div className="flex-1 lg:hidden" />
 
           <div className="flex shrink-0 items-center gap-1.5 sm:gap-2 md:gap-3">
             <a
@@ -65,16 +68,6 @@ export default function Navbar() {
             >
               <Search className="h-4 w-4 md:h-5 md:w-5" />
             </button>
-            <button
-              type="button"
-              onClick={() => setCollectionOpen(true)}
-              className="btn-nav-menu hidden px-3 py-1.5 text-xs sm:flex sm:px-4 sm:py-2 sm:text-sm md:px-5"
-              aria-label="Order for Collection"
-            >
-              <span className="hidden lg:inline">Order for Collection</span>
-              <span className="lg:hidden">Collection</span>
-              <NavArrowIcon className="!h-5 !w-5 sm:!h-6 sm:!w-6" />
-            </button>
             <Link
               href="/menu"
               className="btn-nav-menu px-3 py-1.5 text-xs sm:px-4 sm:py-2 sm:text-sm md:px-5"
@@ -92,14 +85,42 @@ export default function Navbar() {
               <span className="min-[400px]:hidden">Order</span>
               <NavArrowIcon className="!h-5 !w-5 sm:!h-6 sm:!w-6" />
             </a>
+            {/* Hamburger — visible below lg */}
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen((v) => !v)}
+              className="nav-icon-button p-1.5 lg:hidden"
+              aria-label={mobileMenuOpen ? "Close navigation" : "Open navigation"}
+              aria-expanded={mobileMenuOpen}
+            >
+              {mobileMenuOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
+            </button>
           </div>
         </nav>
-      </header>
 
-      <CollectionModal
-        isOpen={collectionOpen}
-        onClose={() => setCollectionOpen(false)}
-      />
+        {/* Mobile nav dropdown */}
+        {mobileMenuOpen && (
+          <div className="border-t border-white/10 px-6 pb-4 pt-2 lg:hidden">
+            <ul className="flex flex-col">
+              {topNavigation.map((item) => (
+                <li key={item.label}>
+                  <Link
+                    href={item.href}
+                    className="type-label nav-link block py-3"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </header>
 
       {searchOpen && (
         <div className="fixed inset-0 z-[70] bg-[var(--color-text)]/40">
