@@ -5,7 +5,7 @@ import { joinTeamSection, siteConfig } from "@/lib/siteData";
 
 export default function JoinTeamSection() {
   return (
-    <section id="join" className="bg-[var(--color-bg)] py-6 md:py-8">
+    <section id="join" className="bg-[var(--color-surface)] py-8 md:py-12">
       <div className="section-container">
         <ScrollReveal>
           <LandingFrame panelClassName="book-panel-frame">

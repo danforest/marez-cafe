@@ -5,7 +5,7 @@ import { cateringSection, siteConfig } from "@/lib/siteData";
 
 export default function CateringSection() {
   return (
-    <section id="catering" className="bg-[var(--color-bg)] py-6 md:py-8">
+    <section id="catering" className="bg-[var(--color-bg)] py-8 md:py-12">
       <div className="section-container">
         <ScrollReveal>
           <LandingFrame>

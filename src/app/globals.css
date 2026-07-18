@@ -172,13 +172,13 @@
 
 .landing-frame {
   position: relative;
-  padding: 1.25rem 1.75rem 2.5rem;
+  padding: 0.5rem 0 2rem;
   background-color: var(--color-bg);
 }
 
 @media (min-width: 768px) {
   .landing-frame {
-    padding: 1.5rem 2.5rem 3rem;
+    padding: 0.75rem 0 2.5rem;
   }
 }
 
@@ -208,17 +208,14 @@
 }
 
 .landing-dotted-wrap {
-  margin-inline: 0.75rem;
-  border: 1px dashed var(--color-border);
-  border-radius: 3rem;
-  padding: 3px;
+  /* passthrough — border removed for finished sections */
 }
 
 .landing-panel {
   overflow: hidden;
-  border: 1px solid var(--color-border);
-  border-radius: 2.5rem;
+  border-radius: 2rem;
   background: var(--color-surface);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07), 0 1px 4px rgba(0, 0, 0, 0.05);
 }
 
 .landing-panel-visible {
@@ -235,7 +232,7 @@
   }
 
   .landing-dotted-wrap {
-    margin-inline: 1.25rem;
+    /* passthrough */
   }
 }
 
@@ -744,23 +741,25 @@
   .book-panel-grid {
     grid-template-columns: 55% 45%;
     align-items: stretch;
+    min-height: 520px;
   }
 }
 
 .book-panel-content {
-  padding: 2rem;
+  padding: 2.75rem 2.5rem;
   text-align: left;
 }
 
 .book-panel-title {
   font-family: var(--font-display);
-  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
   font-weight: 900;
-  line-height: 1.05;
+  line-height: 1.0;
   letter-spacing: 0.01em;
   text-transform: uppercase;
   color: var(--color-text);
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  font-variation-settings: 'opsz' 120, 'SOFT' 10;
 }
 
 .book-panel-intro {
@@ -826,12 +825,13 @@
 }
 
 .join-panel-grid {
-  min-height: 280px;
+  min-height: 360px;
 }
 
 @media (min-width: 768px) {
   .join-panel-grid {
     grid-template-columns: 45% 55%;
+    min-height: 520px;
   }
 }
 
@@ -848,16 +848,17 @@
   .catering-grid {
     grid-template-columns: 55% 45%;
     align-items: stretch;
+    min-height: 520px;
   }
 }
 
 .catering-panel {
-  padding: 2rem 1.75rem 2.5rem;
+  padding: 2.75rem 2rem 3rem;
 }
 
 @media (min-width: 768px) {
   .catering-panel {
-    padding: 2.5rem 2.5rem 3rem;
+    padding: 3.5rem 3rem 4rem;
   }
 }
 
