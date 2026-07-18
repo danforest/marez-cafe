@@ -5,12 +5,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import NavArrowIcon from "@/components/NavArrowIcon";
-import { orderLinks, topNavigation } from "@/lib/siteData";
+import OrderModal from "@/components/OrderModal";
+import { topNavigation } from "@/lib/siteData";
 
 export default function Navbar() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [orderOpen, setOrderOpen] = useState(false);
 
   return (
     <>
@@ -75,16 +77,15 @@ export default function Navbar() {
               Menu
               <NavArrowIcon className="!h-5 !w-5 sm:!h-6 sm:!w-6" />
             </Link>
-            <a
-              href={orderLinks.deliveroo}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              type="button"
+              onClick={() => setOrderOpen(true)}
               className="btn-nav-order px-3 py-1.5 text-xs sm:px-4 sm:py-2 sm:text-sm md:px-5"
             >
               <span className="hidden min-[400px]:inline">Order Online</span>
               <span className="min-[400px]:hidden">Order</span>
               <NavArrowIcon className="!h-5 !w-5 sm:!h-6 sm:!w-6" />
-            </a>
+            </button>
             {/* Hamburger — visible below lg */}
             <button
               type="button"
@@ -121,6 +122,8 @@ export default function Navbar() {
           </div>
         )}
       </header>
+
+      <OrderModal isOpen={orderOpen} onClose={() => setOrderOpen(false)} />
 
       {searchOpen && (
         <div className="fixed inset-0 z-[70] bg-[var(--color-text)]/40">
