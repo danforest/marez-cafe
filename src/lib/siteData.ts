@@ -75,7 +75,7 @@ export const topNavigation = [
   { label: "Join Our Team", href: "#join" },
   { label: "Book", href: "#book" },
   { label: "Catering", href: "#catering" },
-  { label: "Contact Us", href: "#contact" },
+  { label: "Reservations", href: "#contact" },
 ];
 
 export const announcement = {
@@ -240,10 +240,10 @@ export const bookSection = {
 
 export const cateringSection = {
   title: "Catering",
+  leadText:
+    "Feeding the office? Marez brings Mediterranean and North African-inspired platters straight to your workplace — order ahead for meetings, team lunches, or all-day events. Ask us about lead times, delivery radius and minimum orders.",
   privateText:
-    "We host private events and offer catering for special occasions. If you'd like to hire the venue, get in touch and we'll take care of the rest.",
-  offSiteText:
-    "Need catering at home or at work? Send us an email and we'll handle the details, from menu to delivery.",
+    "We also cater for private events and venue hire. Get in touch and we'll handle every detail, from menu to delivery.",
   cta: { label: "Get in touch", href: "#contact" },
 };
 
@@ -609,7 +609,7 @@ export const footer = {
       links: [
         { label: "Our Story", href: "#philosophy" },
         { label: "Health & Safety", href: "#contact" },
-        { label: "Contact Us", href: "#contact" },
+        { label: "Reservations", href: "#contact" },
       ],
     },
     {

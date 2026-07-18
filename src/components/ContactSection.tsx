@@ -5,12 +5,37 @@ import LandingFrame from "@/components/LandingFrame";
 import ScrollReveal from "@/components/ScrollReveal";
 import { contactSection } from "@/lib/siteData";
 
-export default function ContactSection() {
-  const [status, setStatus] = useState<"idle" | "success">("idle");
+// TODO: update RESERVATIONS_EMAIL to a dedicated inbox once one is set up
+const RESERVATIONS_EMAIL = "hello@marez.co.uk";
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setStatus("success");
+export default function ContactSection() {
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const date = (form.elements.namedItem("date") as HTMLInputElement).value;
+    const time = (form.elements.namedItem("time") as HTMLInputElement).value;
+    const people = (form.elements.namedItem("people") as HTMLInputElement).value;
+    const dogs = (form.elements.namedItem("dogs") as HTMLSelectElement).value;
+    const highchairs = (form.elements.namedItem("highchairs") as HTMLSelectElement).value;
+    const name = (form.elements.namedItem("guestname") as HTMLInputElement).value;
+
+    const body = [
+      `Name: ${name}`,
+      `Date: ${date}`,
+      `Time: ${time}`,
+      `Number of people: ${people}`,
+      `Dogs: ${dogs}`,
+      `High chairs needed: ${highchairs}`,
+    ].join("\n");
+
+    const mailto = `mailto:${RESERVATIONS_EMAIL}?subject=${encodeURIComponent(
+      "Reservation Request"
+    )}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailto;
+    setSubmitted(true);
   };
 
   return (
@@ -25,9 +50,11 @@ export default function ContactSection() {
                     <p className="type-eyebrow contact-panel-eyebrow">
                       {contactSection.eyebrow}
                     </p>
-                    <h2 className="contact-panel-title">{contactSection.title}</h2>
+                    <h2 className="contact-panel-title">Reservations</h2>
                     <p className="type-body contact-panel-intro">
-                      {contactSection.intro}
+                      We welcome walk-ins first-come, first-served. For groups of 5 or
+                      more, use this form to request a booking — it will open your email
+                      client pre-filled and ready to send.
                     </p>
                   </header>
 
@@ -42,45 +69,99 @@ export default function ContactSection() {
                 </aside>
 
                 <div className="contact-panel-main">
-                  {status === "success" ? (
-                    <p
-                      className="type-body-sm contact-panel-success"
-                      role="status"
-                    >
-                      {contactSection.successMessage}
+                  {submitted ? (
+                    <p className="type-body-sm contact-panel-success" role="status">
+                      Your email client should have opened with your reservation details
+                      pre-filled. Just hit send and we&apos;ll be in touch to confirm.
                     </p>
                   ) : (
                     <form onSubmit={handleSubmit} className="contact-form">
                       <div className="contact-form-grid">
-                        <input
-                          type="text"
-                          name="name"
-                          required
-                          autoComplete="name"
-                          placeholder="Your name"
-                          className="contact-input"
-                          aria-label="Name"
-                        />
-                        <input
-                          type="email"
-                          name="email"
-                          required
-                          autoComplete="email"
-                          placeholder="Email address"
-                          className="contact-input"
-                          aria-label="Email"
-                        />
-                        <textarea
-                          name="message"
-                          required
-                          rows={6}
-                          placeholder="What can we help with?"
-                          className="contact-input contact-textarea contact-textarea-full"
-                          aria-label="Message"
-                        />
+                        <div className="contact-field">
+                          <label htmlFor="guestname" className="contact-label">Your name</label>
+                          <input
+                            id="guestname"
+                            type="text"
+                            name="guestname"
+                            required
+                            autoComplete="name"
+                            placeholder="Full name"
+                            className="contact-input"
+                          />
+                        </div>
+
+                        <div className="contact-field">
+                          <label htmlFor="res-people" className="contact-label">Number of people</label>
+                          <input
+                            id="res-people"
+                            type="number"
+                            name="people"
+                            min="5"
+                            max="50"
+                            required
+                            placeholder="e.g. 6"
+                            className="contact-input"
+                          />
+                        </div>
+
+                        <div className="contact-field">
+                          <label htmlFor="res-date" className="contact-label">Date</label>
+                          <input
+                            id="res-date"
+                            type="date"
+                            name="date"
+                            required
+                            className="contact-input"
+                          />
+                        </div>
+
+                        <div className="contact-field">
+                          <label htmlFor="res-time" className="contact-label">Time</label>
+                          <input
+                            id="res-time"
+                            type="time"
+                            name="time"
+                            required
+                            className="contact-input"
+                          />
+                        </div>
+
+                        <div className="contact-field">
+                          <label htmlFor="res-dogs" className="contact-label">Dogs joining?</label>
+                          <select
+                            id="res-dogs"
+                            name="dogs"
+                            className="contact-input res-select"
+                          >
+                            <option value="No">No dogs</option>
+                            <option value="1 dog">1 dog</option>
+                            <option value="2 dogs">2 dogs</option>
+                            <option value="3+ dogs">3+ dogs</option>
+                          </select>
+                        </div>
+
+                        <div className="contact-field">
+                          <label htmlFor="res-highchairs" className="contact-label">High chairs needed</label>
+                          <select
+                            id="res-highchairs"
+                            name="highchairs"
+                            className="contact-input res-select"
+                          >
+                            <option value="None">None</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3+">3+</option>
+                          </select>
+                        </div>
                       </div>
+
+                      <p className="type-body-sm mt-4 text-[var(--color-text-muted)]">
+                        Submitting will open your email app pre-filled — just hit send.
+                        Bookings accepted for groups of 5 or more.
+                      </p>
+
                       <button type="submit" className="btn-primary contact-submit">
-                        {contactSection.submitLabel}
+                        Request reservation
                       </button>
                     </form>
                   )}

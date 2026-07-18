@@ -5,13 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import NavArrowIcon from "@/components/NavArrowIcon";
-import { useMenuModal } from "@/components/MenuModalContext";
+import CollectionModal from "@/components/CollectionModal";
 import { orderLinks, topNavigation } from "@/lib/siteData";
 
 export default function Navbar() {
-  const { openMenu } = useMenuModal();
   const [searchOpen, setSearchOpen] = useState(false);
   const [query, setQuery] = useState("");
+  const [collectionOpen, setCollectionOpen] = useState(false);
 
   return (
     <>
@@ -67,12 +67,21 @@ export default function Navbar() {
             </button>
             <button
               type="button"
-              onClick={openMenu}
+              onClick={() => setCollectionOpen(true)}
+              className="btn-nav-menu hidden px-3 py-1.5 text-xs sm:flex sm:px-4 sm:py-2 sm:text-sm md:px-5"
+              aria-label="Order for Collection"
+            >
+              <span className="hidden lg:inline">Order for Collection</span>
+              <span className="lg:hidden">Collection</span>
+              <NavArrowIcon className="!h-5 !w-5 sm:!h-6 sm:!w-6" />
+            </button>
+            <Link
+              href="/menu"
               className="btn-nav-menu px-3 py-1.5 text-xs sm:px-4 sm:py-2 sm:text-sm md:px-5"
             >
               Menu
               <NavArrowIcon className="!h-5 !w-5 sm:!h-6 sm:!w-6" />
-            </button>
+            </Link>
             <a
               href={orderLinks.deliveroo}
               target="_blank"
@@ -86,6 +95,11 @@ export default function Navbar() {
           </div>
         </nav>
       </header>
+
+      <CollectionModal
+        isOpen={collectionOpen}
+        onClose={() => setCollectionOpen(false)}
+      />
 
       {searchOpen && (
         <div className="fixed inset-0 z-[70] bg-[var(--color-text)]/40">

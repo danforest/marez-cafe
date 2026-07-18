@@ -5,7 +5,7 @@
   --color-primary: #0d2454; /* deep navy — matches original marez.co.uk nav */
   --color-secondary: #4a5a6e; /* keep for badges, accents, secondary elements */
   --color-accent: #c4a028; /* button gold — olive/muted, not orange */
-  --color-bg: #4a5568; /* muted slate blue-grey page background */
+  --color-bg: #faf9f6; /* warm cream — site-wide background */
   --color-surface: #ffffff;
   --color-text: #111111; /* near-black headlines */
   --color-text-muted: #555555; /* body/subtext */
@@ -27,7 +27,7 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--color-primary);
   --color-accent: var(--color-accent);
-  --color-bg: #4a5568;
+  --color-bg: var(--color-bg);
   --color-surface: #ffffff;
   --color-off-white: var(--color-bg);
   --color-text: var(--color-text);
@@ -44,11 +44,11 @@
 @layer base {
   html {
     font-family: var(--font-family-base);
-    background-color: #4a5568;
+    background-color: var(--color-bg);
   }
 
   body {
-    background-color: #4a5568;
+    background-color: var(--color-bg);
     font-family: var(--font-family-base);
     @apply text-[var(--color-text)] antialiased;
     font-size: 1rem;
@@ -56,7 +56,7 @@
   }
 
   main {
-    background-color: #4a5568;
+    background-color: var(--color-bg);
   }
 
   h1,
@@ -171,7 +171,7 @@
 .landing-frame {
   position: relative;
   padding: 1.25rem 1.75rem 2.5rem;
-  background-color: #4a5568;
+  background-color: var(--color-bg);
 }
 
 @media (min-width: 768px) {
@@ -444,7 +444,7 @@
   padding: 0.875rem 1rem;
   border: 1px solid var(--color-border);
   border-radius: 0.75rem;
-  background: #f4f6f9;
+  background: var(--color-bg);
   text-decoration: none;
   transition:
     border-color 0.15s ease,
@@ -453,7 +453,7 @@
 
 .contact-detail:hover {
   border-color: rgb(196 160 40 / 0.45);
-  background: #eef1f6;
+  background: #f0ede8;
 }
 
 .contact-detail-label {
@@ -566,6 +566,51 @@
   border-radius: 0.875rem;
   background: #f8f6ef;
   color: var(--color-text);
+}
+
+/* ── Instagram section ── */
+
+.instagram-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  gap: 0.5rem;
+}
+
+.instagram-headline {
+  font-family: var(--font-sans), sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-text);
+  line-height: 1.05;
+  margin-top: 0.5rem;
+}
+
+.instagram-handle {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.instagram-handle:hover {
+  color: var(--color-accent);
+}
+
+.instagram-embed-area {
+  width: 100%;
+}
+
+.instagram-placeholder {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.9375rem;
+  padding: 3rem 0;
 }
 
 /* ── Book hero (full-bleed image + floating panels) ── */
@@ -1180,4 +1225,155 @@
   opacity: 0.55;
   text-align: left;
   font-style: normal;
+}
+
+/* ── Scrolling marquee banner ── */
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 28s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation-play-state: paused;
+  }
+}
+
+.marquee-wrap:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ── Logo watermark ── */
+
+.logo-watermark {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 0;
+  user-select: none;
+  overflow: hidden;
+}
+
+.logo-watermark img {
+  width: min(72vw, 520px);
+  opacity: 0.055;
+  filter: sepia(1) saturate(2.5) hue-rotate(8deg) brightness(0.6);
+}
+
+/* ── Menu pages ── */
+
+.menu-page-container {
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.menu-category-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 1rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--color-border);
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.15s ease;
+}
+
+.menu-category-row:hover {
+  opacity: 0.75;
+}
+
+.menu-item-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-border);
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu-item-row:hover .menu-item-name {
+  color: var(--color-accent);
+}
+
+.menu-item-row:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.menu-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.1em 0.45em;
+  border-radius: 3px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.6;
+}
+
+.menu-badge-v {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.menu-badge-df {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+/* Collection modal */
+.collection-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.collection-modal-panel {
+  background: var(--color-surface);
+  border-radius: 1.25rem;
+  padding: 2rem 1.75rem 2.25rem;
+  max-width: 26rem;
+  width: 100%;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.22);
+  position: relative;
+}
+
+/* Reservation form styles */
+.res-select {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: 0.625rem;
+  background: var(--color-surface);
+  padding: 0.8125rem 0.9375rem;
+  font-family: var(--font-family-base);
+  font-size: 0.9375rem;
+  color: var(--color-text);
+  appearance: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.res-select:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgb(196 160 40 / 0.12);
+  outline: none;
 }

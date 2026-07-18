@@ -1,5 +1,6 @@
 import BookSection from "@/components/BookSection";
 import CateringSection from "@/components/CateringSection";
+import InstagramSection from "@/components/InstagramSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
@@ -8,6 +9,7 @@ import LandingFrame from "@/components/LandingFrame";
 import { MenuModalProvider } from "@/components/MenuModalContext";
 import Navbar from "@/components/Navbar";
 import PhilosophyBlurb from "@/components/PhilosophyBlurb";
+import ScrollingBanner from "@/components/ScrollingBanner";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import WhoWeAre from "@/components/WhoWeAre";
 
@@ -28,6 +30,7 @@ export default function Home() {
 
       <main id="main">
         <WhoWeAre />
+        <InstagramSection />
         <PhilosophyBlurb />
         <TestimonialsSection />
         <BookSection />
@@ -35,6 +38,7 @@ export default function Home() {
         <JoinTeamSection />
         <ContactSection />
       </main>
+      <ScrollingBanner />
       <Footer />
     </MenuModalProvider>
   );

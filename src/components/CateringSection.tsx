@@ -10,8 +10,8 @@ export default function CateringSection() {
           <LandingFrame>
             <div className="catering-panel">
               <h2 className="book-panel-title">{cateringSection.title}</h2>
+              <p className="book-panel-text">{cateringSection.leadText}</p>
               <p className="book-panel-text">{cateringSection.privateText}</p>
-              <p className="book-panel-text">{cateringSection.offSiteText}</p>
               <a href={cateringSection.cta.href} className="btn-primary catering-cta">
                 {cateringSection.cta.label}
               </a>
