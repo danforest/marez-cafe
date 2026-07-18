@@ -96,7 +96,7 @@ export default function ContactSection() {
                             id="res-people"
                             type="number"
                             name="people"
-                            min="5"
+                            min="1"
                             max="50"
                             required
                             placeholder="e.g. 6"
