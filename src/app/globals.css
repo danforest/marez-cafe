@@ -621,12 +621,12 @@
 .book-hero {
   position: relative;
   width: 100%;
-  min-height: 560px;
+  min-height: 680px;
 }
 
 @media (min-width: 768px) {
   .book-hero {
-    min-height: 640px;
+    min-height: 820px;
   }
 }
 
