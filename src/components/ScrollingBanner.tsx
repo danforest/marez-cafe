@@ -1,8 +1,9 @@
+import { Fragment } from "react";
+
 const ITEMS = [
   "Mediterranean warmth · North African heart",
   "Teddington, London",
   "Order for Collection — 15% off",
-  "Mediterranean warmth · North African heart",
   "Feel-Good Feasting",
   "Open Mon–Sat 8am–5pm · Sun 9am–4pm",
 ];
@@ -12,17 +13,15 @@ export default function ScrollingBanner() {
 
   return (
     <div
-      className="marquee-wrap overflow-hidden border-y border-[var(--color-border)] bg-[var(--color-surface)] py-3"
+      className="marquee-band marquee-wrap overflow-hidden py-2 md:py-3"
       aria-hidden="true"
     >
-      <div className="marquee-track flex gap-12">
+      <div className="marquee-track flex items-center">
         {repeated.map((text, i) => (
-          <span
-            key={i}
-            className="type-eyebrow shrink-0 whitespace-nowrap tracking-widest"
-          >
-            {text}
-          </span>
+          <Fragment key={i}>
+            <span className="banner-item">{text}</span>
+            <span className="banner-sep" aria-hidden="true">◆</span>
+          </Fragment>
         ))}
       </div>
     </div>
