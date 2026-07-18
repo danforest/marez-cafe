@@ -70,7 +70,7 @@ export default async function ItemPage({ params }: Props) {
           <div className="flex flex-col justify-start">
             <div className="flex flex-wrap items-start justify-between gap-3">
               <h1 className="type-display text-2xl leading-tight md:text-3xl">{item.name}</h1>
-              <p className="type-label text-xl font-bold">{item.price}</p>
+              <p className="type-label text-xl font-bold tabular-nums">{item.price}</p>
             </div>
 
             {item.badges?.length ? (

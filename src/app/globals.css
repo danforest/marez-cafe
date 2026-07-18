@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --font-family-base: var(--font-dm-sans), system-ui, sans-serif;
+  --font-display: var(--font-fraunces), Georgia, 'Times New Roman', serif;
+  --font-body: var(--font-switzer), -apple-system, 'Segoe UI', sans-serif;
   --color-primary: #0d2454; /* deep navy — matches original marez.co.uk nav */
   --color-secondary: #4a5a6e; /* keep for badges, accents, secondary elements */
   --color-accent: #c4a028; /* button gold — olive/muted, not orange */
@@ -37,19 +38,19 @@
   --color-cream: var(--color-bg);
   --color-charcoal: var(--color-text);
   --color-olive: var(--color-olive);
-  --font-sans: var(--font-family-base);
-  --font-serif: var(--font-family-base);
+  --font-sans: var(--font-body);
+  --font-serif: var(--font-display);
 }
 
 @layer base {
   html {
-    font-family: var(--font-family-base);
+    font-family: var(--font-body);
     background-color: var(--color-bg);
   }
 
   body {
     background-color: var(--color-bg);
-    font-family: var(--font-family-base);
+    font-family: var(--font-body);
     @apply text-[var(--color-text)] antialiased;
     font-size: 1rem;
     line-height: 1.7;
@@ -65,7 +66,7 @@
   h4,
   h5,
   h6 {
-    @apply font-sans font-bold uppercase text-[var(--color-text)];
+    @apply font-serif font-bold uppercase text-[var(--color-text)];
     letter-spacing: 0.04em;
   }
 }
@@ -118,10 +119,11 @@
 }
 
 .type-hero-landing {
-  @apply font-sans font-normal uppercase text-[var(--color-text)];
+  @apply font-serif font-normal uppercase text-[var(--color-text)];
   font-size: clamp(2.25rem, 6.5vw, 4.25rem);
   line-height: 1.05;
   letter-spacing: 0.055em;
+  font-variation-settings: 'opsz' 120, 'SOFT' 15;
 }
 
 .btn-hero {
@@ -269,7 +271,7 @@
 
 .who-we-are-headline {
   margin-top: 0.75rem;
-  font-family: var(--font-sans), sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(2.5rem, 5vw, 3.75rem);
   font-weight: 900;
   line-height: 1.05;
@@ -397,7 +399,7 @@
 
 .contact-panel-title {
   margin-top: 0.75rem;
-  font-family: var(--font-sans), sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(1.75rem, 3.5vw, 2.5rem);
   font-weight: 900;
   line-height: 1.05;
@@ -580,7 +582,7 @@
 }
 
 .instagram-headline {
-  font-family: var(--font-sans), sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 900;
   text-transform: uppercase;
@@ -750,7 +752,7 @@
 }
 
 .book-panel-title {
-  font-family: var(--font-sans), sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(1.75rem, 3.5vw, 2.5rem);
   font-weight: 900;
   line-height: 1.05;
@@ -913,25 +915,28 @@
 }
 
 .type-display {
-  @apply font-sans font-bold uppercase text-[var(--color-text)];
+  @apply font-serif font-bold uppercase text-[var(--color-text)];
   font-size: clamp(2rem, 4vw, 3.25rem);
   line-height: 1.12;
   letter-spacing: 0.035em;
   margin-top: 0.875rem;
+  font-variation-settings: 'opsz' 96, 'SOFT' 20;
 }
 
 .type-heading {
-  @apply font-sans font-bold uppercase text-[var(--color-text)];
+  @apply font-serif font-bold uppercase text-[var(--color-text)];
   font-size: 1.25rem;
   line-height: 1.25;
   letter-spacing: 0.04em;
+  font-variation-settings: 'opsz' 72, 'SOFT' 30;
 }
 
 .type-heading-lg {
-  @apply font-sans font-bold uppercase text-[var(--color-text)];
+  @apply font-serif font-bold uppercase text-[var(--color-text)];
   font-size: clamp(1.5rem, 2.5vw, 2rem);
   line-height: 1.2;
   letter-spacing: 0.035em;
+  font-variation-settings: 'opsz' 80, 'SOFT' 25;
 }
 
 .type-body {
@@ -954,10 +959,11 @@
 }
 
 .type-quote {
-  @apply font-sans font-normal text-[var(--color-text)];
+  @apply font-serif font-normal text-[var(--color-text)];
   font-size: clamp(1.25rem, 2.5vw, 1.875rem);
   line-height: 1.5;
   letter-spacing: -0.01em;
+  font-variation-settings: 'opsz' 60, 'SOFT' 60;
 }
 
 .logo-text {
@@ -1014,7 +1020,7 @@
 }
 
 .footer-newsletter-headline {
-  font-family: var(--font-sans), sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(1.5rem, 3vw, 2.25rem);
   font-weight: 800;
   text-transform: uppercase;
@@ -1082,7 +1088,7 @@
   background: #2f3f52;
   color: #f5f0e6;
   padding: 1.75rem 1.5rem 2rem;
-  font-family: var(--font-family-base);
+  font-family: var(--font-body);
   font-size: 0.8125rem;
   line-height: 1.55;
 }
@@ -1365,7 +1371,7 @@
   border-radius: 0.625rem;
   background: var(--color-surface);
   padding: 0.8125rem 0.9375rem;
-  font-family: var(--font-family-base);
+  font-family: var(--font-body);
   font-size: 0.9375rem;
   color: var(--color-text);
   appearance: none;

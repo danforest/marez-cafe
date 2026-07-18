@@ -80,7 +80,7 @@ export default async function CategoryPage({ params }: Props) {
                       )}
                     </div>
                     <div className="shrink-0 text-right">
-                      <span className="type-label whitespace-nowrap font-semibold">
+                      <span className="type-label whitespace-nowrap font-semibold tabular-nums">
                         {item.price}
                       </span>
                       <span
