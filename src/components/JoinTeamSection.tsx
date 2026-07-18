@@ -1,7 +1,7 @@
 import Image from "next/image";
 import LandingFrame from "@/components/LandingFrame";
 import ScrollReveal from "@/components/ScrollReveal";
-import { joinTeamSection } from "@/lib/siteData";
+import { joinTeamSection, siteConfig } from "@/lib/siteData";
 
 export default function JoinTeamSection() {
   return (
@@ -25,6 +25,12 @@ export default function JoinTeamSection() {
                   <p className="book-panel-intro join-panel-intro">
                     {joinTeamSection.intro}
                   </p>
+                  <a
+                    href={`mailto:${siteConfig.email}`}
+                    className="btn-primary mt-6 inline-flex"
+                  >
+                    Get in touch
+                  </a>
                 </div>
               </div>
             </div>

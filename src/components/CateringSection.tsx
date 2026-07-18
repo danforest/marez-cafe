@@ -1,7 +1,7 @@
 import Image from "next/image";
 import LandingFrame from "@/components/LandingFrame";
 import ScrollReveal from "@/components/ScrollReveal";
-import { cateringSection } from "@/lib/siteData";
+import { cateringSection, siteConfig } from "@/lib/siteData";
 
 export default function CateringSection() {
   return (
@@ -14,9 +14,14 @@ export default function CateringSection() {
                 <h2 className="book-panel-title">{cateringSection.title}</h2>
                 <p className="book-panel-text">{cateringSection.leadText}</p>
                 <p className="book-panel-text">{cateringSection.privateText}</p>
-                <a href={cateringSection.cta.href} className="btn-primary catering-cta">
-                  {cateringSection.cta.label}
-                </a>
+                <div className="catering-cta flex flex-wrap gap-3">
+                  <a href={cateringSection.cta.href} className="btn-primary">
+                    {cateringSection.cta.label}
+                  </a>
+                  <a href={`mailto:${siteConfig.email}`} className="btn-outline">
+                    Get in touch
+                  </a>
+                </div>
               </div>
               <div className="catering-image">
                 <Image
