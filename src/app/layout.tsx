@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Fraunces } from "next/font/google";
-import localFont from "next/font/local";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -9,16 +8,6 @@ const fraunces = Fraunces({
   display: "swap",
   variable: "--font-fraunces",
   axes: ["opsz", "SOFT"],
-});
-
-const generalSans = localFont({
-  src: [
-    { path: "../../public/fonts/general-sans-400.woff2", weight: "400", style: "normal" },
-    { path: "../../public/fonts/general-sans-500.woff2", weight: "500", style: "normal" },
-    { path: "../../public/fonts/general-sans-600.woff2", weight: "600", style: "normal" },
-  ],
-  display: "swap",
-  variable: "--font-general-sans",
 });
 
 export const metadata: Metadata = {
@@ -35,9 +24,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${generalSans.variable} h-full scroll-smooth`}
+      className={`${fraunces.variable} h-full scroll-smooth`}
     >
-      <body className={`${generalSans.className} relative min-h-full`}>
+      <body className="relative min-h-full">
         {/* Logo watermark — sits behind all page content */}
         <div className="logo-watermark" aria-hidden="true">
           {/* eslint-disable-next-line @next/next/no-img-element */}
