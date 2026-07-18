@@ -26,6 +26,13 @@ export default function RootLayout({
       lang="en"
       className={`${fraunces.variable} h-full scroll-smooth`}
     >
+      <head>
+        <link rel="preconnect" href="https://api.fontshare.com" />
+        <link
+          href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className="relative min-h-full">
         {/* Logo watermark — sits behind all page content */}
         <div className="logo-watermark" aria-hidden="true">
