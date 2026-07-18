@@ -48,8 +48,9 @@ export default async function ItemPage({ params }: Props) {
 
   return (
     <div className="menu-page-container">
-      <div className="section-container max-w-2xl py-12 md:py-16">
-        <div className="mb-2">
+      <div className="section-container max-w-4xl py-12 md:py-16">
+        {/* Breadcrumb — full width above both columns */}
+        <div className="mb-6">
           <Link
             href={`/menu/${cat.slug}`}
             className="type-eyebrow inline-flex items-center gap-1.5 transition-colors hover:text-[var(--color-accent)]"
@@ -58,31 +59,35 @@ export default async function ItemPage({ params }: Props) {
           </Link>
         </div>
 
-        {/* TODO: swap src for real food photo at same aspect ratio (16:9, e.g. 800×450) */}
-        <div className="mt-6 flex aspect-video w-full items-center justify-center rounded-2xl border border-dashed border-[var(--color-border)] bg-[var(--color-surface)]">
-          <p className="type-body-sm text-[var(--color-text-muted)]">Image Coming Soon</p>
-        </div>
-
-        <div className="mt-8">
-          <div className="flex flex-wrap items-start justify-between gap-3">
-            <h1 className="type-display text-2xl leading-tight md:text-3xl">{item.name}</h1>
-            <p className="type-label text-xl font-bold">{item.price}</p>
+        {/* Two-column layout: image left ~42%, text right */}
+        <div className="grid gap-8 md:grid-cols-[42%_1fr] md:gap-10 lg:gap-14">
+          {/* Image — TODO: swap for real food photo at 1:1 */}
+          <div className="flex aspect-square w-full items-center justify-center rounded-2xl border border-dashed border-[var(--color-border)] bg-[var(--color-surface)]">
+            <p className="type-body-sm text-[var(--color-text-muted)]">Image Coming Soon</p>
           </div>
 
-          {item.badges?.length ? (
-            <div className="mt-3">
-              <Badges item={item} />
+          {/* Text content */}
+          <div className="flex flex-col justify-start">
+            <div className="flex flex-wrap items-start justify-between gap-3">
+              <h1 className="type-display text-2xl leading-tight md:text-3xl">{item.name}</h1>
+              <p className="type-label text-xl font-bold">{item.price}</p>
             </div>
-          ) : null}
 
-          {item.description && (
-            <p className="type-body mt-4 leading-relaxed">{item.description}</p>
-          )}
-        </div>
+            {item.badges?.length ? (
+              <div className="mt-3">
+                <Badges item={item} />
+              </div>
+            ) : null}
 
-        <div className="mt-8 rounded-xl border border-[var(--color-border)] p-5">
-          <h2 className="type-eyebrow mb-2">Allergens</h2>
-          <p className="type-body-sm text-[var(--color-text-muted)]">Coming soon</p>
+            {item.description && (
+              <p className="type-body mt-4 leading-relaxed">{item.description}</p>
+            )}
+
+            <div className="mt-8 rounded-xl border border-[var(--color-border)] p-5">
+              <h2 className="type-eyebrow mb-2">Allergens</h2>
+              <p className="type-body-sm text-[var(--color-text-muted)]">Coming soon</p>
+            </div>
+          </div>
         </div>
 
         <footer className="mt-10 border-t border-[var(--color-border)] pt-6">
