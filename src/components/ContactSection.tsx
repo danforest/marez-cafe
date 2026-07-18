@@ -19,10 +19,11 @@ export default function ContactSection() {
     const people = (form.elements.namedItem("people") as HTMLInputElement).value;
     const dogs = (form.elements.namedItem("dogs") as HTMLSelectElement).value;
     const highchairs = (form.elements.namedItem("highchairs") as HTMLSelectElement).value;
-    const name = (form.elements.namedItem("guestname") as HTMLInputElement).value;
+    const firstName = (form.elements.namedItem("firstname") as HTMLInputElement).value;
+    const lastName = (form.elements.namedItem("lastname") as HTMLInputElement).value;
 
     const body = [
-      `Name: ${name}`,
+      `Name: ${firstName} ${lastName}`,
       `Date: ${date}`,
       `Time: ${time}`,
       `Number of people: ${people}`,
@@ -78,14 +79,27 @@ export default function ContactSection() {
                     <form onSubmit={handleSubmit} className="contact-form">
                       <div className="contact-form-grid">
                         <div className="contact-field">
-                          <label htmlFor="guestname" className="contact-label">Your name</label>
+                          <label htmlFor="firstname" className="contact-label">First name</label>
                           <input
-                            id="guestname"
+                            id="firstname"
                             type="text"
-                            name="guestname"
+                            name="firstname"
                             required
-                            autoComplete="name"
-                            placeholder="Full name"
+                            autoComplete="given-name"
+                            placeholder="First name"
+                            className="contact-input"
+                          />
+                        </div>
+
+                        <div className="contact-field">
+                          <label htmlFor="lastname" className="contact-label">Last name</label>
+                          <input
+                            id="lastname"
+                            type="text"
+                            name="lastname"
+                            required
+                            autoComplete="family-name"
+                            placeholder="Last name"
                             className="contact-input"
                           />
                         </div>
