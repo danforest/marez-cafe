@@ -2,7 +2,7 @@
 
 :root {
   --font-display: var(--font-fraunces), Georgia, 'Times New Roman', serif;
-  --font-body: var(--font-switzer), -apple-system, 'Segoe UI', sans-serif;
+  --font-body: var(--font-general-sans), -apple-system, 'Segoe UI', sans-serif;
   --color-primary: #0d2454; /* deep navy — matches original marez.co.uk nav */
   --color-secondary: #4a5a6e; /* keep for badges, accents, secondary elements */
   --color-accent: #c4a028; /* button gold — olive/muted, not orange */

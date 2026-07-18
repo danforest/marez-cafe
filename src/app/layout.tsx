@@ -11,14 +11,14 @@ const fraunces = Fraunces({
   axes: ["opsz", "SOFT"],
 });
 
-const switzer = localFont({
+const generalSans = localFont({
   src: [
-    { path: "../../public/fonts/switzer-400.woff2", weight: "400", style: "normal" },
-    { path: "../../public/fonts/switzer-500.woff2", weight: "500", style: "normal" },
-    { path: "../../public/fonts/switzer-600.woff2", weight: "600", style: "normal" },
+    { path: "../../public/fonts/general-sans-400.woff2", weight: "400", style: "normal" },
+    { path: "../../public/fonts/general-sans-500.woff2", weight: "500", style: "normal" },
+    { path: "../../public/fonts/general-sans-600.woff2", weight: "600", style: "normal" },
   ],
   display: "swap",
-  variable: "--font-switzer",
+  variable: "--font-general-sans",
 });
 
 export const metadata: Metadata = {
@@ -35,9 +35,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${switzer.variable} h-full scroll-smooth`}
+      className={`${fraunces.variable} ${generalSans.variable} h-full scroll-smooth`}
     >
-      <body className={`${switzer.className} relative min-h-full`}>
+      <body className={`${generalSans.className} relative min-h-full`}>
         {/* Logo watermark — sits behind all page content */}
         <div className="logo-watermark" aria-hidden="true">
           {/* eslint-disable-next-line @next/next/no-img-element */}
