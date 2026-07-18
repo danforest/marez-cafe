@@ -1,3 +1,4 @@
+import Image from "next/image";
 import LandingFrame from "@/components/LandingFrame";
 import ScrollReveal from "@/components/ScrollReveal";
 import { cateringSection } from "@/lib/siteData";
@@ -8,13 +9,24 @@ export default function CateringSection() {
       <div className="section-container">
         <ScrollReveal>
           <LandingFrame>
-            <div className="catering-panel">
-              <h2 className="book-panel-title">{cateringSection.title}</h2>
-              <p className="book-panel-text">{cateringSection.leadText}</p>
-              <p className="book-panel-text">{cateringSection.privateText}</p>
-              <a href={cateringSection.cta.href} className="btn-primary catering-cta">
-                {cateringSection.cta.label}
-              </a>
+            <div className="catering-grid">
+              <div className="catering-panel">
+                <h2 className="book-panel-title">{cateringSection.title}</h2>
+                <p className="book-panel-text">{cateringSection.leadText}</p>
+                <p className="book-panel-text">{cateringSection.privateText}</p>
+                <a href={cateringSection.cta.href} className="btn-primary catering-cta">
+                  {cateringSection.cta.label}
+                </a>
+              </div>
+              <div className="catering-image">
+                <Image
+                  src="/assets/catering.jpg"
+                  alt="Catering order ready for collection"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 45vw"
+                  className="object-cover"
+                />
+              </div>
             </div>
           </LandingFrame>
         </ScrollReveal>
