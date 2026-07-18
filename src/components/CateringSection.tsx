@@ -14,14 +14,9 @@ export default function CateringSection() {
                 <h2 className="book-panel-title">{cateringSection.title}</h2>
                 <p className="book-panel-text">{cateringSection.leadText}</p>
                 <p className="book-panel-text">{cateringSection.privateText}</p>
-                <div className="catering-cta flex flex-wrap gap-3">
-                  <a href={cateringSection.cta.href} className="btn-primary">
-                    {cateringSection.cta.label}
-                  </a>
-                  <a href={`mailto:${siteConfig.email}`} className="btn-outline">
-                    Get in touch
-                  </a>
-                </div>
+                <a href={`mailto:${siteConfig.email}`} className="btn-primary catering-cta">
+                  Get in touch
+                </a>
               </div>
               <div className="catering-image">
                 <Image
