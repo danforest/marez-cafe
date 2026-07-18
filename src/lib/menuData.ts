@@ -22,7 +22,7 @@ export interface MenuDataCategory {
 }
 
 export const MENU_DISCLAIMER =
-  "If you have any allergen or dietary requirements, please let us know. Although great care is applied within our venue, we cannot guarantee the total absence of allergens in our dishes. Detailed allergen information can be found on our QR code and upon request. All products are subject to availability. An optional service charge of 12.5% may be added to your bill. Prices include VAT at the current rate.";
+  "If you have any allergen or dietary requirements, please let us know. Although great care is applied within our venue, we cannot guarantee the total absence of allergens in our dishes. Detailed allergen information is available upon request. All products are subject to availability. An optional service charge of 12.5% may be added to your bill. Prices include VAT at the current rate.";
 
 export const MENU_CATEGORIES: MenuDataCategory[] = [
   {
