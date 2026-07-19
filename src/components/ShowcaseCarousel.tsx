@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { showcaseSlides } from "@/lib/siteData";
 
@@ -36,17 +37,19 @@ export default function ShowcaseCarousel() {
             transition={{ duration: 0.6 }}
             className="mx-auto flex max-w-4xl flex-col items-center"
           >
-            <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl shadow-md">
-              <Image
-                src={current.image}
-                alt={current.name}
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 896px"
-                priority
-              />
-            </div>
-            <p className="type-heading mt-6 text-2xl">{current.name}</p>
+            <Link href={current.href} className="group w-full">
+              <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl shadow-md">
+                <Image
+                  src={current.image}
+                  alt={current.name}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                  sizes="(max-width: 1024px) 100vw, 896px"
+                  priority
+                />
+              </div>
+              <p className="type-heading mt-6 text-2xl group-hover:text-[var(--color-accent)] transition-colors">{current.name}</p>
+            </Link>
           </motion.div>
         </AnimatePresence>
 

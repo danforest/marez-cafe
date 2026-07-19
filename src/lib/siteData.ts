@@ -158,32 +158,32 @@ export const mealsSection = {
 export const showcaseSlides: ShowcaseSlide[] = [
   {
     name: "Shakshuka",
-    href: "#menus-breakfast",
+    href: "/menu/breakfast/shakshuka",
     image: dishImages.shakshukaMarez,
   },
   {
     name: "Helena's Bap",
-    href: "#menus-breakfast",
+    href: "/menu/breakfast/helenas-bap",
     image: dishImages.helenasBap,
   },
   {
     name: "Acai Bowl",
-    href: "#menus-breakfast",
+    href: "/menu/breakfast/acai-bowl",
     image: dishImages.acaiBowl,
   },
   {
     name: "Crunchy Nut French Toast",
-    href: "#menus-breakfast",
+    href: "/menu/breakfast/crunchy-nut-french-toast",
     image: dishImages.crunchyNutFrenchToast,
   },
   {
     name: "Ranchero",
-    href: "#menus-breakfast",
+    href: "/menu/breakfast/ranchero",
     image: dishImages.ranchero,
   },
   {
     name: "Spicy Scrambled Eggs",
-    href: "#menus-breakfast",
+    href: "/menu/breakfast/the-spicy-scrambled",
     image: dishImages.spicyScrambledEggs,
   },
 ];
