@@ -6,6 +6,7 @@ export interface MenuDataItem {
   price: string;
   description: string;
   badges?: MenuItemBadge[];
+  image?: string;
 }
 
 export interface MenuDataSubsection {
@@ -41,6 +42,7 @@ export const MENU_CATEGORIES: MenuDataCategory[] = [
             description:
               "Scrambled eggs with jalapeños, sautéed red onion, sautéed spinach, avocado, cheddar cheese and crumbled feta over toasted sourdough, finished with basil-marinated cherry tomatoes.",
             badges: ["v"],
+            image: "/images/dishes/spicy-scrambled-eggs.jpg",
           },
           {
             slug: "full-mediterranean",
@@ -57,6 +59,7 @@ export const MENU_CATEGORIES: MenuDataCategory[] = [
             description:
               "Our slow-cooked cherry tomato sauce, mixed peppers, baked fried eggs, grilled aubergine, crispy onion, chilli herbs served with toasted sourdough.",
             badges: ["v"],
+            image: "/images/dishes/shakshuka-marez.jpg",
           },
           {
             slug: "ranchero",
@@ -64,6 +67,7 @@ export const MENU_CATEGORIES: MenuDataCategory[] = [
             price: "£17",
             description:
               "Poached eggs with sautéed potatoes, chorizo, mushrooms, grilled peppers, our homemade onion gherkin relish, jalapeños, smashed avocado, peppadew & coriander yoghurt, chilli herbs and crispy onion.",
+            image: "/images/dishes/ranchero.jpg",
           },
           {
             slug: "the-breakfast-burrito",
@@ -188,6 +192,7 @@ export const MENU_CATEGORIES: MenuDataCategory[] = [
             description:
               "Thick-cut brioche in a crunchy crust, layered with banana, strawberries, blueberries, Nutella, our homemade pecan & hazelnut granola and maple syrup.",
             badges: ["v"],
+            image: "/images/dishes/crunchy-nut-french-toast.jpg",
           },
         ],
       },
@@ -217,6 +222,7 @@ export const MENU_CATEGORIES: MenuDataCategory[] = [
             description:
               "Brazilian premium açaí, blended fresh in-house with banana and apple juice, crowned with our homemade pecan & hazelnut granola, almond butter, fresh berries and desiccated coconut.",
             badges: ["v"],
+            image: "/images/dishes/acai-bowl.jpg",
           },
           {
             slug: "petit-acai",
@@ -231,6 +237,7 @@ export const MENU_CATEGORIES: MenuDataCategory[] = [
             price: "£10",
             description:
               "Grilled bacon, smashed avocado and our homemade spicy North African harissa in a warm brioche bun.",
+            image: "/images/dishes/helenas-bap.jpg",
           },
           {
             slug: "grilled-bacon-ciabatta",
@@ -785,6 +792,7 @@ export const MENU_CATEGORIES: MenuDataCategory[] = [
             price: "£17",
             description:
               "Vegan meatless patty with sautéed potatoes, mushrooms, grilled peppers, our homemade onion gherkin relish, jalapeños, smashed avocado, finished with chilli herbs and crispy onion.",
+            image: "/images/dishes/ranchero.jpg",
           },
           {
             slug: "vegan-shakshuka",
@@ -792,6 +800,7 @@ export const MENU_CATEGORIES: MenuDataCategory[] = [
             price: "£17",
             description:
               "Our slow-cooked cherry tomato sauce, mixed peppers, vegan meatless patty, grilled aubergine, crispy onion, chilli herbs served with toasted sourdough.",
+            image: "/images/dishes/shakshuka-marez.jpg",
           },
           {
             slug: "vegan-avocado-toast",
@@ -818,6 +827,7 @@ export const MENU_CATEGORIES: MenuDataCategory[] = [
             price: "£17",
             description:
               "Brazilian premium açaí, blended fresh in-house with banana and apple juice, crowned with our homemade pecan & hazelnut granola, almond butter, fresh berries and desiccated coconut.",
+            image: "/images/dishes/acai-bowl.jpg",
           },
           {
             slug: "vegan-petit-acai",
@@ -909,6 +919,7 @@ export const MENU_CATEGORIES: MenuDataCategory[] = [
             description:
               "Scrambled eggs with jalapeños, sautéed red onion, sautéed spinach, avocado, cheddar and crumbled feta over toasted gluten-free bread, finished with basil-marinated cherry tomatoes.",
             badges: ["v"],
+            image: "/images/dishes/spicy-scrambled-eggs.jpg",
           },
           {
             slug: "gf-full-mediterranean",
@@ -925,6 +936,7 @@ export const MENU_CATEGORIES: MenuDataCategory[] = [
             description:
               "Our slow-cooked cherry tomato sauce, mixed peppers, baked fried eggs, grilled aubergine, chilli herbs served with gluten-free bread.",
             badges: ["v"],
+            image: "/images/dishes/shakshuka-marez.jpg",
           },
           {
             slug: "gf-ranchero",
@@ -932,6 +944,7 @@ export const MENU_CATEGORIES: MenuDataCategory[] = [
             price: "£17",
             description:
               "Poached eggs with sautéed potatoes, chorizo, mushrooms, grilled peppers, our homemade onion gherkin relish, jalapeños, smashed avocado, peppadew & coriander yoghurt and chilli herbs.",
+            image: "/images/dishes/ranchero.jpg",
           },
           {
             slug: "gf-eggs-forestiere",
@@ -1026,6 +1039,7 @@ export const MENU_CATEGORIES: MenuDataCategory[] = [
             description:
               "Premium açaí, blended fresh in-house with banana and apple juice, crowned with almond butter, fresh berries and desiccated coconut.",
             badges: ["v"],
+            image: "/images/dishes/acai-bowl.jpg",
           },
           {
             slug: "gf-petit-acai",
@@ -1040,6 +1054,7 @@ export const MENU_CATEGORIES: MenuDataCategory[] = [
             price: "£10",
             description:
               "Grilled bacon, smashed avocado and our homemade spicy North African harissa in a warm gluten-free brioche bun.",
+            image: "/images/dishes/helenas-bap.jpg",
           },
         ],
       },

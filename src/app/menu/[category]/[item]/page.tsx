@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { MENU_CATEGORIES, MENU_DISCLAIMER, type MenuDataItem } from "@/lib/menuData";
@@ -61,10 +62,23 @@ export default async function ItemPage({ params }: Props) {
 
         {/* Two-column layout: image left ~42%, text right */}
         <div className="grid gap-8 md:grid-cols-[42%_1fr] md:gap-10 lg:gap-14">
-          {/* Image — TODO: swap for real food photo at 1:1 */}
-          <div className="flex aspect-square w-full items-center justify-center rounded-2xl border border-dashed border-[var(--color-border)] bg-[var(--color-surface)]">
-            <p className="type-body-sm text-[var(--color-text-muted)]">Image Coming Soon</p>
-          </div>
+          {/* Image */}
+          {item.image ? (
+            <div className="relative aspect-square w-full overflow-hidden rounded-2xl">
+              <Image
+                src={item.image}
+                alt={item.name}
+                fill
+                sizes="(max-width: 768px) 100vw, 42vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+          ) : (
+            <div className="flex aspect-square w-full items-center justify-center rounded-2xl border border-dashed border-[var(--color-border)] bg-[var(--color-surface)]">
+              <p className="type-body-sm text-[var(--color-text-muted)]">Image Coming Soon</p>
+            </div>
+          )}
 
           {/* Text content */}
           <div className="flex flex-col justify-start">
