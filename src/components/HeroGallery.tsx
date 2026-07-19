@@ -149,36 +149,35 @@ export default function HeroGallery() {
     };
 
     setIsDragging(true);
-    event.currentTarget.setPointerCapture(event.pointerId);
-  };
 
-  const onPointerMove = (event: React.PointerEvent<HTMLDivElement>) => {
-    if (!isDraggingRef.current) return;
+    const pointerId = event.pointerId;
 
-    const deltaX = event.clientX - dragStartRef.current.x;
-    if (Math.abs(deltaX) > DRAG_THRESHOLD_PX) {
-      didDragRef.current = true;
-    }
+    const handleMove = (e: PointerEvent) => {
+      if (e.pointerId !== pointerId) return;
+      const deltaX = e.clientX - dragStartRef.current.x;
+      if (Math.abs(deltaX) > DRAG_THRESHOLD_PX) {
+        didDragRef.current = true;
+      }
+      applyOffset(dragStartRef.current.offset - deltaX);
+    };
 
-    applyOffset(dragStartRef.current.offset - deltaX);
-  };
+    const cleanup = () => {
+      isDraggingRef.current = false;
+      setIsDragging(false);
+      if (didDragRef.current) {
+        blockNavigationRef.current = true;
+        window.setTimeout(() => {
+          blockNavigationRef.current = false;
+        }, 80);
+      }
+      window.removeEventListener("pointermove", handleMove);
+      window.removeEventListener("pointerup", cleanup);
+      window.removeEventListener("pointercancel", cleanup);
+    };
 
-  const endDrag = (event: React.PointerEvent<HTMLDivElement>) => {
-    if (!isDraggingRef.current) return;
-
-    isDraggingRef.current = false;
-    setIsDragging(false);
-
-    if (event.currentTarget.hasPointerCapture(event.pointerId)) {
-      event.currentTarget.releasePointerCapture(event.pointerId);
-    }
-
-    if (didDragRef.current) {
-      blockNavigationRef.current = true;
-      window.setTimeout(() => {
-        blockNavigationRef.current = false;
-      }, 80);
-    }
+    window.addEventListener("pointermove", handleMove);
+    window.addEventListener("pointerup", cleanup);
+    window.addEventListener("pointercancel", cleanup);
   };
 
   return (
@@ -205,9 +204,6 @@ export default function HeroGallery() {
           ref={trackRef}
           className={`hero-gallery-track flex w-max select-none ${isDragging ? "hero-gallery-track--dragging" : ""}`}
           onPointerDown={onPointerDown}
-          onPointerMove={onPointerMove}
-          onPointerUp={endDrag}
-          onPointerCancel={endDrag}
         >
           <SlideStrip
             slides={showcaseSlides}
