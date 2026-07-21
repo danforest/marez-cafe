@@ -1,4 +1,3 @@
-import PerksSection from "@/components/PerksSection";
 import BookSection from "@/components/BookSection";
 import CateringSection from "@/components/CateringSection";
 import InstagramSection from "@/components/InstagramSection";
@@ -38,7 +37,6 @@ export default function Home() {
         <BookSection />
         <CateringSection />
         <JoinTeamSection />
-        <PerksSection />
         <ContactSection />
       </main>
       <ScrollingBanner />
