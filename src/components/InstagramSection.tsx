@@ -1,8 +1,16 @@
+"use client";
+
+import Script from "next/script";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export default function InstagramSection() {
   return (
     <section id="instagram" className="bg-[var(--color-bg)] py-12 md:py-16">
+      <Script
+        src="https://w.behold.so/widget.js"
+        type="module"
+        strategy="lazyOnload"
+      />
       <div className="section-container">
         <ScrollReveal>
           <div className="instagram-header">
@@ -19,8 +27,8 @@ export default function InstagramSection() {
           </div>
 
           <div className="instagram-embed-area">
-            {/* Paste your Behold.so embed snippet here */}
-            <p className="instagram-placeholder">Instagram feed coming soon</p>
+            {/* @ts-expect-error custom element from Behold.so */}
+            <behold-widget feed-id="mCfA7yUO59Nu1cefKhDl" />
           </div>
         </ScrollReveal>
       </div>
