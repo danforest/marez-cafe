@@ -17,7 +17,7 @@ export default function ContactSection() {
     const date = (form.elements.namedItem("date") as HTMLInputElement).value;
     const time = (form.elements.namedItem("time") as HTMLInputElement).value;
     const people = (form.elements.namedItem("people") as HTMLInputElement).value;
-    const dogs = (form.elements.namedItem("dogs") as HTMLSelectElement).value;
+    const fourLeggedFriends = (form.elements.namedItem("dogs") as HTMLSelectElement).value;
     const highchairs = (form.elements.namedItem("highchairs") as HTMLSelectElement).value;
     const firstName = (form.elements.namedItem("firstname") as HTMLInputElement).value;
     const lastName = (form.elements.namedItem("lastname") as HTMLInputElement).value;
@@ -27,7 +27,7 @@ export default function ContactSection() {
       `Date: ${date}`,
       `Time: ${time}`,
       `Number of people: ${people}`,
-      `Dogs: ${dogs}`,
+      `Four-legged friends: ${fourLeggedFriends}`,
       `High chairs needed: ${highchairs}`,
     ].join("\n");
 

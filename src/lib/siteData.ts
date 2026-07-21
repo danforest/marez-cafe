@@ -278,7 +278,7 @@ export const menuCategories: MenuCategory[] = [
     items: [
       {
         name: "Shakshuka Marez",
-        price: "£12.50",
+        price: "12.50",
         description:
           "Slow-cooked spiced tomato and pepper sauce with poached eggs, roasted aubergine and thick-cut sourdough for dipping.",
         ingredients: [
@@ -293,7 +293,7 @@ export const menuCategories: MenuCategory[] = [
       },
       {
         name: "Marez Full Breakfast",
-        price: "£14.95",
+        price: "14.95",
         description: "Lamb merguez, grilled halloumi, eggs, harissa beans, sourdough.",
         ingredients: ["Merguez", "Halloumi", "Eggs", "Harissa", "Sourdough"],
         tags: ["Meat Lover"],
@@ -302,7 +302,7 @@ export const menuCategories: MenuCategory[] = [
       },
       {
         name: "North African French Toast",
-        price: "£11.75",
+        price: "11.75",
         description: "Orange blossom brioche, honey, pistachio, rose yoghurt.",
         ingredients: ["Brioche", "Honey", "Pistachio", "Orange blossom"],
         tags: ["Vegetarian", "Sweet"],
@@ -322,7 +322,7 @@ export const menuCategories: MenuCategory[] = [
     items: [
       {
         name: "Harissa Chicken Bowl",
-        price: "£13.95",
+        price: "13.95",
         description: "Marinated chicken, couscous, roasted peppers, tahini dressing.",
         ingredients: ["Chicken", "Couscous", "Harissa", "Tahini", "Peppers"],
         tags: ["Gluten Free"],
@@ -331,7 +331,7 @@ export const menuCategories: MenuCategory[] = [
       },
       {
         name: "Mediterranean Mezze Plate",
-        price: "£12.25",
+        price: "12.25",
         description: "Hummus, baba ganoush, falafel, pickles, warm flatbread.",
         ingredients: ["Chickpeas", "Aubergine", "Flatbread", "Pickles"],
         tags: ["Vegan", "Sharing"],
@@ -340,7 +340,7 @@ export const menuCategories: MenuCategory[] = [
       },
       {
         name: "Lamb & Mint Burger",
-        price: "£15.50",
+        price: "15.50",
         description: "Spiced lamb patty, mint yoghurt, pickled onion, brioche bun.",
         ingredients: ["Lamb", "Mint", "Brioche", "Pickled onion"],
         tags: ["Meat Lover"],
@@ -360,7 +360,7 @@ export const menuCategories: MenuCategory[] = [
     items: [
       {
         name: "Mini Marez Breakfast",
-        price: "£7.50",
+        price: "7.50",
         description: "Egg, beans, toast soldiers, fresh fruit.",
         ingredients: ["Egg", "Beans", "Toast", "Fruit"],
         tags: ["Kids"],
@@ -369,7 +369,7 @@ export const menuCategories: MenuCategory[] = [
       },
       {
         name: "Cheesy Flatbread Pizza",
-        price: "£6.95",
+        price: "6.95",
         description: "Tomato, mozzarella, sweetcorn. Fun and filling.",
         ingredients: ["Flatbread", "Mozzarella", "Tomato"],
         tags: ["Kids", "Vegetarian"],
@@ -390,7 +390,7 @@ export const menuCategories: MenuCategory[] = [
     items: [
       {
         name: "Flat White",
-        price: "£3.50",
+        price: "3.50",
         description: "Climpson & Sons The Baron, rich, rounded, sweet.",
         ingredients: ["Espresso", "Steamed milk"],
         tags: ["Coffee"],
@@ -399,7 +399,7 @@ export const menuCategories: MenuCategory[] = [
       },
       {
         name: "Fresh Mint Tea",
-        price: "£3.25",
+        price: "3.25",
         description: "North African style, fresh, fragrant, restorative.",
         ingredients: ["Fresh mint", "Hot water"],
         tags: ["Vegan"],
