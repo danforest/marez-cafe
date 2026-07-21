@@ -141,16 +141,16 @@ export default function ContactSection() {
                         </div>
 
                         <div className="contact-field">
-                          <label htmlFor="res-dogs" className="contact-label">Dogs joining?</label>
+                          <label htmlFor="res-dogs" className="contact-label">Four-legged friends joining?</label>
                           <select
                             id="res-dogs"
                             name="dogs"
                             className="contact-input res-select"
                           >
-                            <option value="No">No dogs</option>
-                            <option value="1 dog">1 dog</option>
-                            <option value="2 dogs">2 dogs</option>
-                            <option value="3+ dogs">3+ dogs</option>
+                            <option value="No">No four-legged friends</option>
+                            <option value="1">1 four-legged friend</option>
+                            <option value="2">2 four-legged friends</option>
+                            <option value="3+">3+ four-legged friends</option>
                           </select>
                         </div>
 
