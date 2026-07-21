@@ -1,4 +1,4 @@
-import BlueLightSection from "@/components/BlueLightSection";
+import PerksSection from "@/components/PerksSection";
 import BookSection from "@/components/BookSection";
 import CateringSection from "@/components/CateringSection";
 import InstagramSection from "@/components/InstagramSection";
@@ -38,7 +38,7 @@ export default function Home() {
         <BookSection />
         <CateringSection />
         <JoinTeamSection />
-        <BlueLightSection />
+        <PerksSection />
         <ContactSection />
       </main>
       <ScrollingBanner />

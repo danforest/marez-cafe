@@ -105,7 +105,7 @@ export default function Navbar() {
 
         {/* Mobile nav dropdown */}
         {mobileMenuOpen && (
-          <div className="border-t border-white/10 px-6 pb-4 pt-2 lg:hidden">
+          <div className="border-t border-[var(--color-border)] px-6 pb-4 pt-2 lg:hidden">
             <ul className="flex flex-col">
               {topNavigation.map((item) => (
                 <li key={item.label}>

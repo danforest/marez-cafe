@@ -13,7 +13,7 @@ export default function NavArrowIcon({ className = "" }: { className?: string })
       >
         <path
           d="M3 1.5L7 5L3 8.5"
-          stroke="var(--color-primary)"
+          stroke="#ffffff"
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"

@@ -11,7 +11,7 @@
   --color-text: #111111; /* near-black headlines */
   --color-text-muted: #555555; /* body/subtext */
   --color-border: #d2d2d2;
-  --color-arrow: #ffffff;
+  --color-arrow: var(--color-primary);
   --background: var(--color-bg);
   --foreground: var(--color-text);
   /* legacy aliases */
@@ -132,7 +132,7 @@
 }
 
 .btn-nav-menu {
-  @apply inline-flex items-center gap-2.5 rounded-full border border-white/35 bg-transparent px-6 py-2.5 font-sans font-semibold text-white transition-colors hover:border-[var(--color-accent)] hover:text-[var(--color-accent)];
+  @apply inline-flex items-center gap-2.5 rounded-full border border-[var(--color-border)] bg-transparent px-6 py-2.5 font-sans font-semibold text-[var(--color-text)] transition-colors hover:border-[var(--color-accent)] hover:text-[var(--color-accent)];
   font-size: 1.0625rem;
 }
 
@@ -142,16 +142,16 @@
 }
 
 .nav-header {
-  background: var(--color-primary);
-  border-bottom: 1px solid rgb(255 255 255 / 0.1);
+  background: transparent;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .nav-header .logo-text {
-  color: #ffffff;
+  color: var(--color-text);
 }
 
 .nav-header .nav-link {
-  color: #ffffff;
+  color: var(--color-text);
   transition: color 0.15s ease;
 }
 
@@ -160,7 +160,7 @@
 }
 
 .nav-header .nav-icon-button {
-  color: #ffffff;
+  color: var(--color-text);
   transition: color 0.15s ease;
 }
 
@@ -1428,6 +1428,30 @@
   width: 100%;
   box-shadow: 0 24px 64px rgba(0, 0, 0, 0.22);
   position: relative;
+}
+
+/* ── Perks section ── */
+
+.perks-card {
+  padding: 2.5rem 2rem 2.75rem;
+}
+
+@media (min-width: 768px) {
+  .perks-card {
+    padding: 2.75rem 2.5rem 3rem;
+  }
+}
+
+.perks-icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  color: var(--color-accent);
 }
 
 /* Reservation form styles */
