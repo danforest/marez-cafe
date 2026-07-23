@@ -190,15 +190,6 @@ export default function HeroGallery() {
         isHoveredRef.current = false;
       }}
     >
-      <aside
-        className="pointer-events-none absolute right-4 top-[42%] z-30 flex h-32 w-32 -translate-y-1/2 -rotate-[25deg] items-center justify-center rounded-full bg-[var(--color-primary)] p-4 text-center shadow-lg sm:right-6 sm:h-36 sm:w-36 md:right-10 md:h-40 md:w-40 md:p-5 lg:right-14 lg:-translate-x-6 xl:right-16 xl:h-44 xl:w-44 xl:-translate-x-8"
-        aria-label={hero.badgeText}
-      >
-        <p className="text-[0.6875rem] leading-snug text-white sm:text-xs md:text-[0.8125rem] xl:text-sm">
-          {hero.badgeText}
-        </p>
-      </aside>
-
       <div className="overflow-hidden px-6 pb-2 md:px-10 lg:px-14">
         <div
           ref={trackRef}
