@@ -7,7 +7,7 @@ export default function HeroSection() {
   return (
     <section className="relative bg-[var(--color-surface)] pb-6 pt-4 md:pb-10 md:pt-8">
       <aside
-        className="pointer-events-none absolute right-10 top-8 z-10 hidden -rotate-[25deg] items-center justify-center rounded-full bg-[var(--color-accent)] p-5 text-center shadow-lg md:flex md:h-40 md:w-40 lg:right-14 lg:top-10 lg:-translate-x-6 xl:right-16 xl:h-44 xl:w-44 xl:-translate-x-8"
+        className="pointer-events-none absolute right-10 top-16 z-10 hidden -rotate-[25deg] items-center justify-center rounded-full bg-[var(--color-accent)] p-5 text-center shadow-lg md:flex md:h-40 md:w-40 lg:right-14 lg:top-20 lg:-translate-x-6 xl:right-16 xl:h-44 xl:w-44 xl:-translate-x-8"
         aria-label={hero.badgeText}
       >
         <p className="leading-snug text-[var(--color-primary)] md:text-[0.8125rem] xl:text-sm">
