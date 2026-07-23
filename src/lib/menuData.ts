@@ -1141,4 +1141,209 @@ export const MENU_CATEGORIES: MenuDataCategory[] = [
       },
     ],
   },
+  {
+    slug: "alcohol",
+    title: "Alcohol Menu",
+    description: "Wine, beer, cider, cocktails and spirits. Please drink responsibly.",
+    footer: "Add mixers 2.50 — Tonic · Soda · Coke · Lemonade · Ginger Beer · Apple Juice · Orange Juice. Spirits served as 50ml measures.",
+    subsections: [
+      {
+        title: "Sparkling",
+        items: [
+          {
+            slug: "nv-prosecco-20cl",
+            name: "NV Prosecco, Via Vai 20cl",
+            price: "8.95",
+            description: "Lively Prosecco, fragrant with white flowers, with a delicate lemon and lime tang in the mouth. Veneto, Italy. (11% abv)",
+          },
+          {
+            slug: "prosecco-via-vai-bottle",
+            name: "Prosecco, Via Vai",
+            price: "26.95",
+            description: "A lively, crisp, sparkling wine with a delicate lemon character and an aromatic, dry, refreshing finish. Veneto, Italy. (11% abv) · Bottle",
+          },
+        ],
+      },
+      {
+        title: "White Wine",
+        items: [
+          {
+            slug: "via-nova-pinot-grigio-white",
+            name: "Via Nova Pinot Grigio",
+            price: "7.50 / 8.75 / 23.95",
+            description: "175ml / 250ml / Bottle. A crisp, dry, and refreshing Italian white wine known for its light body and flavours of green apple and citrus. Italy / Veneto. (11–12 abv)",
+          },
+          {
+            slug: "coeur-du-mont-sauvignon-blanc",
+            name: "Coeur Du Mont Sauvignon Blanc",
+            price: "23.95",
+            description: "Bottle. On the nose, this white wine combines gooseberry, exotic fruit and peach. The palate is rich and generous, with a fresh, tasty finish and a fruity after-taste. France.",
+          },
+        ],
+      },
+      {
+        title: "Rosé Wine",
+        items: [
+          {
+            slug: "via-nova-pinot-grigio-blush",
+            name: "Via Nova Pinot Grigio Blush",
+            price: "7.00 / 8.45 / 22.95",
+            description: "175ml / 250ml / Bottle. A crisp, dry, and refreshing Italian rosé wine known for its light body and flavours of grapes. Italy / Veneto. (11–12 abv)",
+          },
+          {
+            slug: "la-vidaubanaise-provence-rose",
+            name: "La Vidaubanaise Comte De Provence Rosé",
+            price: "28.95",
+            description: "Bottle. A classic Provence rosé packed full of strawberry and peach and laced with a zingy citrus acidity. Incredibly quaffable, it's ideal on a hot summer day. France.",
+          },
+          {
+            slug: "folc-english-rose",
+            name: "Folc English Rosé",
+            price: "39.95",
+            description: "Bottle. Delicate pink in colour, a refreshing still English rosé with joyful flavours of succulent strawberries and tangy cranberry, complemented by fresh acidity and a fragrant floral finish. England.",
+          },
+        ],
+      },
+      {
+        title: "Red Wine",
+        items: [
+          {
+            slug: "il-molo-merlot",
+            name: "Il Molo Merlot",
+            price: "6.95 / 7.95 / 21.95",
+            description: "175ml / 250ml / Bottle. Lush aromas of ripe blackberries, plums and hint of vanilla. Velvety tannins support a symphony of rich, dark cherry flavours, harmoniously intertwined with subtle oak undertones. Italy.",
+          },
+          {
+            slug: "conde-de-basalu-rioja",
+            name: "Conde De Basalu Rioja Tinto",
+            price: "26.95",
+            description: "Bottle. Cherry red and violet trim. Intense in the nose with aromas of red fruits, in the mouth it is fresh and pleasant with a long and persistent finish. Spain.",
+          },
+        ],
+      },
+      {
+        title: "Bottled Beers & Cider",
+        items: [
+          {
+            slug: "peroni",
+            name: "Peroni 330ml",
+            price: "5.95",
+            description: "5.1% abv",
+          },
+          {
+            slug: "kopparberg-pear",
+            name: "Kopparberg Pear Cider 500ml",
+            price: "5.95",
+            description: "4.5% abv",
+          },
+          {
+            slug: "kopparberg-mixed-fruit",
+            name: "Kopparberg Mixed Fruit Cider 500ml",
+            price: "6.50",
+            description: "4.5% abv — Blackcurrant & Raspberry",
+          },
+          {
+            slug: "kopparberg-strawberry-lime",
+            name: "Kopparberg Strawberry & Lime Cider 500ml",
+            price: "6.50",
+            description: "4.5% abv",
+          },
+          {
+            slug: "lucky-saint",
+            name: "Lucky Saint",
+            price: "5.50",
+            description: "0.5% abv — alcohol-free lager",
+          },
+        ],
+      },
+      {
+        title: "Cocktails & Fizz",
+        items: [
+          {
+            slug: "aperol-spritz",
+            name: "Aperol Spritz",
+            price: "8.95",
+            description: "Soda water, prosecco & orange slice.",
+          },
+          {
+            slug: "marez-spritz",
+            name: "Marez Spritz",
+            price: "8.75",
+            description: "Elderflower cordial, passoã & prosecco.",
+          },
+          {
+            slug: "bloody-mary",
+            name: "Bloody Mary",
+            price: "8.50",
+            description: "Fiery spicy tomato juice, celery salt & fresh lemon.",
+          },
+          {
+            slug: "virgin-mary",
+            name: "Virgin Mary",
+            price: "7.00",
+            description: "Fiery spicy tomato juice, celery salt & fresh lemon — alcohol-free.",
+          },
+          {
+            slug: "marez-bucks-fizz",
+            name: "Marez Bucks Fizz",
+            price: "7.95",
+            description: "Fresh orange juice & prosecco.",
+          },
+          {
+            slug: "nv-prosecco-cocktail",
+            name: "NV Prosecco VIA VAI 20cl",
+            price: "8.95",
+            description: "Lively Prosecco, fragrant with white flowers, with a delicate lemon and lime tang. (11% abv)",
+          },
+        ],
+      },
+      {
+        title: "Spirits — 50ml",
+        items: [
+          {
+            slug: "absolute-vodka",
+            name: "Absolute Vodka",
+            price: "8.95",
+            description: "",
+          },
+          {
+            slug: "tanqueray-london-dry-gin",
+            name: "Tanqueray London Dry Gin",
+            price: "8.95",
+            description: "",
+          },
+          {
+            slug: "hendricks-gin",
+            name: "Hendricks Gin",
+            price: "9.95",
+            description: "",
+          },
+          {
+            slug: "jack-daniels",
+            name: "Jack Daniels",
+            price: "9.95",
+            description: "",
+          },
+          {
+            slug: "bacardi-white-rum",
+            name: "Bacardi White Rum",
+            price: "7.95",
+            description: "",
+          },
+          {
+            slug: "kraken-black-spiced-rum",
+            name: "The Kraken Black Spiced Rum",
+            price: "9.95",
+            description: "",
+          },
+          {
+            slug: "baileys-irish-cream",
+            name: "Baileys Irish Cream",
+            price: "8.95",
+            description: "",
+          },
+        ],
+      },
+    ],
+  },
 ];
